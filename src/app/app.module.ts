@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatDatepickerModule, MatFormFieldModule, MatInputModule, MatNativeDateModule } from '@angular/material';
+import {
+  MatButtonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule,
+  MatNativeDateModule
+} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing-module';
 
@@ -16,11 +19,12 @@ import { DatepickerValidationComponent } from './components/datepicker-validatio
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    AppRoutingModule,
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    AppRoutingModule
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
