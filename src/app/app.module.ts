@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import {
   MatButtonModule, MatDatepickerModule, MatFormFieldModule, MatInputModule,
   MatNativeDateModule
@@ -20,6 +21,7 @@ import { DatepickerValidationComponent } from './components/datepicker-validatio
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
