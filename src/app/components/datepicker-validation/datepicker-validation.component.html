@@ -2,8 +2,18 @@
   datepicker-validation works!
 </p>
 
-<mat-form-field>
-  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-  <mat-datepicker #picker></mat-datepicker>
-</mat-form-field>
+<form ngForm #ngForm='ngForm'>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date"
+           name="date" [(ngModel)]="model.date" #date="ngModel" required>
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+    <mat-error>Invalid date!</mat-error>
+  </mat-form-field>
+
+  <br>
+  {{date.errors | json}}
+  <br>
+  {{model | json}}
+
+</form>
