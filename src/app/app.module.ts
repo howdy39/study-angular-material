@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing-module';
 
 import { AppComponent } from './app.component';
 import { DatepickerValidationComponent } from './components/datepicker-validation/datepicker-validation.component';
+import { DatePickerModule } from './components/datepicker-validation/customdate-adapter';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DatepickerValidationComponent } from './components/datepicker-validatio
     MatDatepickerModule,
     MatNativeDateModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    DatePickerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
