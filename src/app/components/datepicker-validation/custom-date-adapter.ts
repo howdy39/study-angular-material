@@ -35,6 +35,6 @@ export class CustomDateAdapter extends NativeDateAdapter {
   ]
 })
 
-export class DatePickerModule {
+export class CustomDatePickerModule {
 
 }
