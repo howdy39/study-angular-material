@@ -24,6 +24,22 @@
       </mat-select>
     </mat-form-field>
   </div>
+  ---
+  <div *ngIf="(dogsObservable | async) as dogs">
+    <ul>
+      <li *ngFor="let dog of dogs.dogs">
+        {{dog | json}}
+      </li>
+    </ul>
+    <!--<mat-form-field>-->
+      <!--<mat-select placeholder="Favorite dogs" name="dog">-->
+        <!--<mat-option *ngFor="let dog of dogsObservable.dogs | async" [value]="dog">-->
+          <!--{{dog.name}}-->
+        <!--</mat-option>-->
+      <!--</mat-select>-->
+    <!--</mat-form-field>-->
+  </div>
+  ---
   <div>
     <mat-form-field>
       <mat-select placeholder="Favorite animal" [formControl]="animalControl" required>

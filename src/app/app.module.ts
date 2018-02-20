@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 import { DatepickerValidationComponent } from './components/datepicker-validation/datepicker-validation.component';
 import { CustomDatePickerModule } from './components/datepicker-validation/custom-date-adapter';
 import { SelectValidationComponent } from './components/select-validation/select-validation.component';
+import { SelectValidationService } from './components/select-validation/select-validation.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,11 @@ import { SelectValidationComponent } from './components/select-validation/select
     MatButtonModule,
     MatSelectModule,
     CustomDatePickerModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    SelectValidationService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
