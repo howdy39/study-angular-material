@@ -1,8 +1,23 @@
 <p>
-  select-validation works!
+  select-async works!
 </p>
 
 <form ngForm #ngForm='ngForm'>
+  <div *ngIf="(dogsObservable | async) as dogs">
+    <ul>
+      <li *ngFor="let dog of dogs.dogs">
+        {{dog | json}}
+      </li>
+    </ul>
+    <mat-form-field>
+      <mat-select placeholder="Favorite dogs" name="dog">
+        <mat-option *ngFor="let dog of dogs.dogs" [value]="dog">
+          {{dog.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  --- これより下は参考 ---
   <div>
     <mat-form-field>
       <mat-select placeholder="Favorite food" [(value)]="selected">
@@ -23,21 +38,6 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-  </div>
-  ---
-  <div *ngIf="(dogsObservable | async) as dogs">
-    <ul>
-      <li *ngFor="let dog of dogs.dogs">
-        {{dog | json}}
-      </li>
-    </ul>
-    <!--<mat-form-field>-->
-      <!--<mat-select placeholder="Favorite dogs" name="dog">-->
-        <!--<mat-option *ngFor="let dog of dogsObservable.dogs | async" [value]="dog">-->
-          <!--{{dog.name}}-->
-        <!--</mat-option>-->
-      <!--</mat-select>-->
-    <!--</mat-form-field>-->
   </div>
   ---
   <div>

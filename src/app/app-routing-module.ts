@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DatepickerValidationComponent } from './components/datepicker-validation/datepicker-validation.component';
-import { SelectValidationComponent } from './components/select-validation/select-validation.component';
+import { SelectAsyncComponent } from './components/select-async/select-async.component';
 
 const routes: Routes = [
   {
@@ -10,10 +10,10 @@ const routes: Routes = [
   },
   {
     path: 'select-validation',
-    component: SelectValidationComponent,
+    component: SelectAsyncComponent,
   },
   { path: '',
-    component: SelectValidationComponent,
+    component: SelectAsyncComponent,
   },
   // { path: '**', component: PageNotFoundComponent }
 ];

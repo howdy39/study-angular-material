@@ -12,15 +12,15 @@ import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app.component';
 import { DatepickerValidationComponent } from './components/datepicker-validation/datepicker-validation.component';
 import { CustomDatePickerModule } from './components/datepicker-validation/custom-date-adapter';
-import { SelectValidationComponent } from './components/select-validation/select-validation.component';
-import { SelectValidationService } from './components/select-validation/select-validation.service';
+import { SelectAsyncComponent } from './components/select-async/select-async.component';
+import { SelectAsyncService } from './components/select-async/select-async.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatepickerValidationComponent,
-    SelectValidationComponent
+    SelectAsyncComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +38,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
   ],
   providers: [
-    SelectValidationService,
+    SelectAsyncService,
   ],
   bootstrap: [AppComponent]
 })

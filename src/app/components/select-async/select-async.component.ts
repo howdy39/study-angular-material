@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/Observable';
-import { Dogs } from './select-validation.models';
-import { SelectValidationService } from './select-validation.service';
+import { Dogs } from './select-async.models';
+import { SelectAsyncService } from './select-async.service';
 
 @Component({
   selector: 'app-select-validation',
-  templateUrl: './select-validation.component.html',
-  styleUrls: ['./select-validation.component.css']
+  templateUrl: './select-async.component.html',
+  styleUrls: ['./select-async.component.css']
 })
-export class SelectValidationComponent implements OnInit {
+export class SelectAsyncComponent implements OnInit {
 
   public foods = [
     {value: 'steak-0', viewValue: 'Steak'},
@@ -34,7 +34,7 @@ export class SelectValidationComponent implements OnInit {
 
 
   constructor(
-    private service: SelectValidationService
+    private service: SelectAsyncService
   ) {
   }
 
