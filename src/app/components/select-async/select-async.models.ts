@@ -3,11 +3,11 @@ export interface Dogs {
 }
 
 export interface Dog {
-  id: number;
+  id: string;
   name: string;
   age: number;
 }
 
 export interface MyDog {
-  dog_id: number;
+  dog_id: string;
 }

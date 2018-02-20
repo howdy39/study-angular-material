@@ -12,7 +12,7 @@ export class SelectAsyncService {
 
   dogsList(): Observable<Dogs> {
     // https://gist.github.com/howdy39/c354394f8abfe006346298015b833dd3
-    return this.http.get<Dogs>('https://rawgit.com/howdy39/c354394f8abfe006346298015b833dd3/raw/065938b5d633d7889d67e7e1eda656e17512309a/dogs.json');
+    return this.http.get<Dogs>('https://rawgit.com/howdy39/c354394f8abfe006346298015b833dd3/raw/a06b4a1d1542754ed9ef0e45fd76e52b2b0060f6/dogs.json');
   }
 
   myDog(): Observable<MyDog> {
