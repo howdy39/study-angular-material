@@ -30,6 +30,7 @@ export class SelectAsyncComponent implements OnInit {
     {name: 'Fox', sound: 'Wa-pa-pa-pa-pa-pa-pow!'},
     ];
 
+  public myDogId;
   public dogsObservable: Observable<Dogs>;
 
 
@@ -40,6 +41,10 @@ export class SelectAsyncComponent implements OnInit {
 
   ngOnInit() {
     this.dogsObservable = this.service.dogsList();
+  }
+
+  changeMyDogId() {
+    // this.myDogId
   }
 
 }

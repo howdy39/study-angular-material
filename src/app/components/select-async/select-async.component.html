@@ -3,6 +3,11 @@
 </p>
 
 <form ngForm #ngForm='ngForm'>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Dog id(1 or 2 or 3)" [(ngModel)]="myDogId" name="myDogId" (change)="changeMyDogId()">
+    </mat-form-field>
+  </div>
   <div *ngIf="(dogsObservable | async) as dogs">
     <ul>
       <li *ngFor="let dog of dogs.dogs">
@@ -17,6 +22,8 @@
       </mat-select>
     </mat-form-field>
   </div>
+
+  <br><br><br><br>
   --- これより下は参考 ---
   <div>
     <mat-form-field>
